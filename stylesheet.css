@@ -655,7 +655,7 @@ body {
 
 .contact-form form input,
 form textarea {
-    border: none;
+    border: 2px solid #ff0000;
     outline: none;
     width: 90%;
     padding: 18px;
