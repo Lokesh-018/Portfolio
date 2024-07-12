@@ -50,7 +50,6 @@ body {
 
 .navbar a:hover {
     color: rgb(255, 0, 0);
-
 }
 
 .home {
@@ -62,6 +61,7 @@ body {
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
+    flex-direction: column;
 }
 
 .home-content {
@@ -142,7 +142,6 @@ body {
     animation-delay: 2s;
     box-shadow: 0 0 5px rgb(255, 0, 0),
         0 0 25px rgb(255, 0, 0);
-
 }
 
 .btn-box:hover {
@@ -161,10 +160,9 @@ body {
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
-    transition: background 0.5s, tranform 0.5s;
+    transition: background 0.5s, transform 0.5s;
     box-shadow: 10px 10px 200px #900101f7,
         10px 10px 400px #900101f7;
-
 }
 
 .about {
@@ -173,7 +171,6 @@ body {
     align-items: center;
     gap: 1.5rem;
 }
-
 
 .about-text h2 {
     font-size: 60px;
@@ -235,10 +232,9 @@ body {
     font-weight: 13px;
     border-right: 10px;
     border-radius: 20px;
-    transition: background 0.5s, tranform 0.5s;
+    transition: background 0.5s, transform 0.5s;
     box-shadow: 1px 1px 20px #900101f7,
         1px 1px 40px #900101f7;
-
 }
 
 .skills-list div i {
@@ -270,12 +266,10 @@ body {
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
-    /*opacity: 0;*/
     animation: slideTop is ease forwards;
     animation-delay: 2s;
     box-shadow: 0 0 5px #900101f7,
         0 0 25px #900101f7;
-
 }
 
 .read:hover {
@@ -293,8 +287,8 @@ body {
     flex-wrap: wrap;
 }
 
-.portfolio h2{
-    padding: 100px 0 60px 0 ;
+.portfolio h2 {
+    padding: 100px 0 60px 0;
 }
 
 .container1 {
@@ -311,7 +305,6 @@ body {
     margin-bottom: 60px;
 }
 
-
 .heading1 {
     text-align: center;
     text-decoration: underline;
@@ -325,513 +318,195 @@ body {
     margin-bottom: 1rem;
 }
 
-.Technical-bars .bar {
-    margin-top: 40px 0;
+.Technical-bars .bars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 30px;
 }
 
-.Technical-bars .bar:first-child {
-    margin-top: 0;
-}
-
-.Technical-bars .bar:last-child {
-    margin-bottom: 0;
-}
-
-.Technical-bars .bar .info {
-    margin-bottom: 5px;
-}
-
-.Technical-bars .bar .info span {
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-
-.Technical-bars .bar .progress-line {
-    position: relative;
-    border-radius: 10px;
+.Bar-HTML .progress,
+.Bar-CSS .progress,
+.Bar-JS .progress,
+.Bar-MONGODB .progress,
+.Bar-JAVA .progress,
+.Bar-MYSQL .progress,
+.Bar-REACT .progress,
+.Bar-NODEJS .progress {
+    height: 0.4rem;
     width: 100%;
-    height: 5px;
-    background-color: #000000;
-    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
-.Technical-bars .bar .progress-line span {
+.progress span {
     height: 100%;
-    background-color: #ff0000;
+    background-color: rgb(255, 0, 0);
     position: absolute;
-    border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
+    animation: progress 2s ease-in-out forwards;
 }
 
-.progress-line.html span {
-    width: 90%;
+.Bar-HTML .progress span {
+    width: 95%;
 }
 
-.progress-line.css span {
-    width: 80%;
-}
-
-.progress-line.javascript span {
-    width: 65%;
-}
-
-.progress-line.python span {
-    width: 70%;
-}
-
-.progress-line.react span {
-    width: 60%;
-}
-
-.progress-line.sql span {
+.Bar-CSS .progress span {
     width: 85%;
 }
 
-.progress-line span::after {
-    position: absolute;
-    padding: 1px 8px;
-    background-color: #000000;
-    color: #ff0000;
-    font-size: 12px;
-    border-radius: 3px;
-    top: -28px;
-    right: -20px;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
+.Bar-JS .progress span {
+    width: 75%;
 }
 
-.progress-line.html span::after {
-    content: "90%";
+.Bar-MONGODB .progress span {
+    width: 65%;
 }
 
-.progress-line.css span::after {
-    content: "80%";
-}
-
-.progress-line.javascript span::after {
-    content: "65%";
-}
-
-.progress-line.python span::after {
-    content: "70%";
-}
-
-.progress-line.react span::after {
-    content: "60%";
-}
-
-.progress-line.sql span::after {
-    content: "85%";
-}
-
-.progress-line span::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-top-color: #000000;
-    top: -10px;
-    right: 0;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
-}
-
-.radial-bars {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-.radial-bars .radial-bar {
+.Bar-JAVA .progress span {
     width: 50%;
-    height: 185px;
-    margin-bottom: 10px;
-    position: relative;
 }
 
-.radial-bars .radial-bar svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 120px;
-    height: 160px;
+.Bar-MYSQL .progress span {
+    width: 70%;
 }
 
-.radial-bars .radial-bar .progress-bar {
-    stroke-width: 10;
-    stop-color: #000000;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-    animation: animate-bar 1s linear forwards;
+.Bar-REACT .progress span {
+    width: 70%;
 }
 
-.path {
-    stroke-width: 10;
-    stroke: #ff0000;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
+.Bar-NODEJS .progress span {
+    width: 50%;
 }
 
-.path-1 {
-    animation: animate-path1 1s 1s linear forwards;
-}
-
-.path-2 {
-    animation: animate-path2 1s 1s linear forwards;
-}
-
-.path-3 {
-    animation: animate-path3 1s 1s linear forwards;
-}
-
-.path-4 {
-    animation: animate-path4 1s 1s linear forwards;
-}
-
-.radial-bar .percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-
-.radial-bar .text {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50px);
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-
-
-.portfolio-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
-}
-
-.row {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 8px;
-    padding: 30px;
-}
-
-.row img {
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-    transition: transform 0.5s;
-}
-
-.layer {
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), #f00);
-    position: absolute;
-    border-radius: 8px;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 40px;
-    transition: height 0.5s;
-}
-
-.layer h5 {
-    color: #ff0000;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.layer p {
-    color: #fff;
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-.layer i {
-    margin-top: 20px;
-    font-size: 20px;
-    background: #000000;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.row:hover img {
-    transform: scale(1.1);
-}
-
-.row:hover .layer {
-    height: 100%;
-}
-
-.contact {
+.service {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 3rem;
-    padding: 100px 100px 0 100px;
-
+    gap: 1.5rem;
 }
 
-.contact-text h4 {
-    margin: 15px 0;
-    color: #f00;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.contact-text p {
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 2rem;
-}
-
-.contact-list {
-    margin-bottom: 3rem;
-}
-
-.contact-list li {
-    margin-bottom: 10px;
-    display: block;
-}
-
-.contact-list li {
-    margin-bottom: 10px;
-    display: block;
-}
-
-.contact-list i {
-    display: inline-block;
-    color: #f00;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all .40s ease;
-}
-
-.contact-list li a:hover {
-    transform: scale(1.01) translateY(-5px);
-    color: #f00;
-}
-
-.contact-form form {
-    position: relative;
-}
-
-.contact-form form input,
-form textarea {
-    border: 2px solid #ff0000;
-    outline: none;
-    width: 90%;
-    padding: 18px;
-    background: transparent;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
-}
-
-.contact-form textarea {
-    resize: none;
-    height: 220px;
-}
-
-.contact-form form .send {
-    display: inline-block;
-    padding: 14px 60px;
-    background: #ff0000;
-    border-radius: 40px;
-    font-size: 18px;
-    color: #ffffff;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    animation: slideTop is ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 5px #f00,
-        0 0 25px #f00;
-}
-
-.contact-form form .send:hover {
-    box-shadow: 0 0 5px #f00,
-        0 0 25px #f00, 0 0 50px #f00,
-        0 0 100px #f00, 0 0 200px #f00;
-}
-
-.last-text p {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #000000;
-    font-weight: 300;
-    margin-top: 70px;
-}
-
-.top {
-    position: fixed;
-    bottom: 2.1rem;
-    right: 2.1rem;
-}
-
-.top i {
-    background: #fff;
-    font-size: 20px;
+footer {
     padding: 10px;
-    border-radius: 0.5rem;
+    color: #fff;
+    text-align: center;
+    background: #000;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes animate-path1 {
-    100% {
-        stroke-dashoffset: 50;
-    }
+footer span {
+    color: #ff0000;
 }
 
-@keyframes animate-path2 {
-    100% {
-        stroke-dashoffset: 180;
-    }
-}
+/* Add media queries for mobile responsiveness */
 
-@keyframes animate-path3 {
-    100% {
-        stroke-dashoffset: 60;
-    }
-}
-
-@keyframes animate-path4 {
-    100% {
-        stroke-dashoffset: 150;
-    }
-}
-
-@keyframes animate-bar {
-    100% {
-        stroke-dashoffset: -1;
-    }
-}
-
-@keyframes showText {
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes animate {
-    100% {
-        transform: scaleX(1);
-    }
-}
-
-@keyframes slideRight {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
     }
 
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
+    .navbar a {
+        font-size: 18px;
+        margin-left: 20px;
+    }
 
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about-text h4 {
+        font-size: 20px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    .portfolio h2 {
+        padding: 50px 0 30px 0;
+    }
+
+    .container1, .container2 {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .Technical-bars .bars {
+        grid-template-columns: 1fr;
     }
 }
 
-@keyframes slideLeft {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 20px 2%;
     }
 
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-
-    }
-}
-
-@keyframes slideTop {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
+    .navbar a {
+        font-size: 16px;
+        margin-left: 10px;
     }
 
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-
+    .home-content h3 {
+        font-size: 20px;
     }
 
-}
-
-@keyframes slideBottom {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
+    .home-content h1 {
+        font-size: 28px;
     }
 
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-
+    .home-content p {
+        font-size: 14px;
     }
 
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .about-text h4 {
+        font-size: 18px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .portfolio h2 {
+        padding: 30px 0 20px 0;
+    }
 }
